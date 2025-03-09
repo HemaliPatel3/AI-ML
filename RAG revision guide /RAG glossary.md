@@ -209,3 +209,90 @@ Certainly! Here are additional terms commonly associated with **Retrieval-Augmen
 - **Definition**: The process of explicitly incorporating additional knowledge (e.g., through fine-tuning or augmenting the retriever) into a model to improve its task-specific performance.
 - **Example**: A RAG system for **medical question answering** might benefit from **knowledge injection** by incorporating a medical ontology into the retriever for more accurate results.
 
+Certainly! Here are additional terms related to **Retrieval-Augmented Generation (RAG)** to further expand the glossary:
+
+---
+
+### **Further Extended RAG Glossary**
+
+---
+
+#### **51. Query-Document Interaction**
+- **Definition**: The relationship between a query and the documents retrieved by the retriever. Effective interaction ensures that the retrieved documents are semantically relevant to the query, improving the overall system performance.
+- **Example**: In a **RAG** system, **query-document interaction** is crucial for determining how well the retrieved documents align with the query’s meaning, which ultimately impacts the quality of the generated response.
+
+#### **52. Query Intent**
+- **Definition**: The underlying purpose or goal behind a user’s query. Understanding **query intent** helps the retrieval system fetch the most relevant information and allows the generative model to provide a more accurate response.
+- **Example**: In a RAG system, identifying whether the user is asking a **factual** question (e.g., "What is the capital of France?") or a **conversational** question (e.g., "Tell me about Paris") helps the model select the right type of response.
+
+#### **53. Contextualization**
+- **Definition**: The process of adding background or contextual information to a query or retrieved document to help improve the relevance and accuracy of the response. **Contextualization** often involves combining previously retrieved information with the new input query.
+- **Example**: A **RAG** system may use **contextualization** to refine the results by considering a user’s previous queries to generate a coherent conversation flow.
+
+#### **54. In-batch Negative Sampling**
+- **Definition**: A technique used in training neural retrievers where negative examples (irrelevant documents) are sampled from the current batch of data to help the model learn what constitutes a non-relevant document.
+- **Example**: In **DPR**, **in-batch negative sampling** helps the model distinguish relevant documents from irrelevant ones by presenting negative examples from the same batch of training data.
+
+#### **55. Approximate Nearest Neighbor (ANN)**
+- **Definition**: A method used in retrieval systems to find documents that are "close" to a given query in high-dimensional space. **ANN** methods approximate the nearest neighbors to improve retrieval efficiency, especially in large-scale systems.
+- **Example**: **FAISS** (Facebook AI Similarity Search) is a popular tool that uses **ANN** to efficiently retrieve relevant documents by approximating the nearest neighbors in the vector space.
+
+#### **56. Knowledge Graph**
+- **Definition**: A structured representation of knowledge that stores entities (e.g., people, places, events) and their relationships. **Knowledge graphs** can be used to enhance RAG models by providing a deeper, structured understanding of the relationships between concepts.
+- **Example**: **Google's Knowledge Graph** helps retrieve structured information about entities like famous people or locations and is used to enhance the generation process in systems like RAG.
+
+#### **57. Out-of-Distribution (OOD) Data**
+- **Definition**: Data that is significantly different from the data used to train the model, making it challenging for the model to generalize. **OOD data** can lead to poor performance in retrieval and generation tasks.
+- **Example**: If a RAG model was trained on news articles but is asked a question about a niche technical topic not covered in the training data, it may struggle to retrieve relevant documents and generate an appropriate response.
+
+#### **58. Few-shot Retrieval**
+- **Definition**: A retrieval approach in which the model is exposed to only a few examples of relevant documents or tasks during training, and still must perform well in finding relevant information.
+- **Example**: A **few-shot retrieval** system in RAG may require only a few query-document pairs to learn how to retrieve relevant documents for a wide range of queries.
+
+#### **59. Hyperparameter Tuning**
+- **Definition**: The process of adjusting model hyperparameters (such as learning rate, batch size, etc.) to optimize the performance of the retrieval and generation components in a RAG model.
+- **Example**: **Hyperparameter tuning** in RAG models can involve adjusting settings like the number of retrieval documents or the temperature of the generative model to balance creativity and relevance.
+
+#### **60. Fine-tuned Retriever**
+- **Definition**: A retriever that has been specifically trained or adjusted (fine-tuned) on a domain-specific dataset to improve its retrieval accuracy for that domain, as opposed to a general-purpose retriever.
+- **Example**: A **fine-tuned retriever** for medical queries would perform better at retrieving relevant medical documents compared to a generic retriever trained on general text.
+
+#### **61. Attention Mask**
+- **Definition**: A binary mask used in transformer models to indicate which parts of the input should be attended to and which parts should be ignored. **Attention masks** are crucial for efficient processing, especially in handling variable-length input sequences.
+- **Example**: In a RAG system, the **attention mask** ensures that only relevant parts of a long document or passage are attended to when generating a response.
+
+#### **62. Retrieval-Augmented Fine-Tuning**
+- **Definition**: A training technique where the retrieval system and generative model are fine-tuned together on a task-specific dataset. This allows both components to work in synergy, optimizing their combined performance.
+- **Example**: A RAG model trained on **legal documents** might undergo **retrieval-augmented fine-tuning** to improve both the retrieval of relevant legal passages and the generation of legally accurate answers.
+
+#### **63. Candidate Selection**
+- **Definition**: The process of choosing a subset of documents (or passages) from the retrieved candidates to be passed on to the generator. The quality of **candidate selection** is critical to improving the accuracy of the generated output.
+- **Example**: After retrieving several documents, a **candidate selection** process might choose the top 5 most relevant passages to use for generating an answer.
+
+#### **64. Zero-shot Transfer**
+- **Definition**: The ability of a model to apply its learned knowledge from one task to a new, unseen task without any task-specific training. **Zero-shot transfer** in RAG models allows the system to generate responses even for tasks or queries it has not been explicitly trained on.
+- **Example**: A RAG model that has been trained on general knowledge could answer a question about a new scientific discovery even without prior specific training on that topic.
+
+#### **65. Retrieval Pruning**
+- **Definition**: The process of reducing the number of retrieved documents based on certain criteria, such as relevance or diversity, to improve computational efficiency and the quality of the output.
+- **Example**: **Retrieval pruning** might involve selecting only the top **k** most relevant documents, or discarding documents that are redundant or less relevant to the query.
+
+#### **66. Domain Adaptation**
+- **Definition**: The process of adapting a pre-trained RAG model to perform better on a specific domain (e.g., medical, legal, technical) by fine-tuning it with domain-specific data.
+- **Example**: **Domain adaptation** in RAG allows a model trained on general knowledge to be fine-tuned on specific medical data, improving its performance in generating medical-related answers.
+
+#### **67. Cross-lingual Retrieval**
+- **Definition**: Retrieval that occurs across different languages, where the model retrieves relevant documents in one language based on a query in another language. This technique allows RAG systems to handle multi-language scenarios.
+- **Example**: A **cross-lingual retrieval** system could retrieve documents in **French** in response to an English-language query about a European history topic.
+
+#### **68. Knowledge Base Augmentation**
+- **Definition**: The process of enhancing an external knowledge base by incorporating new information or dynamically adding fresh content to improve the quality of the retrieval process.
+- **Example**: **Knowledge base augmentation** might involve adding new articles to a **medical knowledge base**, ensuring that the retriever has access to the latest research when generating answers.
+
+#### **69. Reinforcement Learning for Retrieval**
+- **Definition**: A technique where a model learns to improve its retrieval accuracy through a feedback loop, using rewards and penalties to optimize its search for relevant documents.
+- **Example**: **Reinforcement learning** could be applied to train a retrieval model to select more accurate passages based on the feedback from the generative model’s outputs.
+
+#### **70. Generative Recall**
+- **Definition**: The process by which a generative model "recalls" previously learned facts or concepts to generate new information. This involves the ability to pull together information from the retrieval step and produce creative yet accurate output.
+- **Example**: **Generative recall** allows a RAG model to pull facts from its stored knowledge base and **combine** them to answer complex questions, like providing an explanation of a scientific theory.
